@@ -1,0 +1,10 @@
+pageObjects\AddSubcategoryPage.class
+stepDefinitions\pageSteps\PageStepDefinitions.class
+pageObjects\AddCategoryPage.class
+pageObjects\AddContractorPage.class
+pageObjects\AddExpensePage.class
+pageObjects\LoginPage.class
+pageObjects\NavigationPage.class
+runner\TestRunner.class
+MyFirstTest.class
+pageObjects\MainPage.class

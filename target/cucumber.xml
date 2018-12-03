@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="17.72854">
+<testcase classname="Add new contractor" name="Add new contractor" time="4.819676">
+<system-out><![CDATA[Given I am on the Main page.................................................passed
+When I go to Add contractor page............................................passed
+And I enter contractor name "Biedronka".....................................passed
+And I click OK button.......................................................passed
+Then new contractor is created..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add new expense" name="Add expense for one account" time="8.892524">
+<system-out><![CDATA[Given I am on the Main page.................................................passed
+When I go to Add expense page...............................................passed
+And I create new expense with the following data............................passed
+And I click OK button on Add expense page...................................passed
+Then new expense is created.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login to application" name="Login with password" time="4.01634">
+<system-out><![CDATA[Given I open login page.....................................................passed
+When I login with user name "asptanya" and password "12345678"..............passed
+Then I am logged in.........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
