@@ -39,6 +39,7 @@ public class LoginPage {
     }
 
     public void loginToApplication(String strUserName, String strPassword) {
+        clickButtonLogin();
         setInputUserName(strUserName);
         setPassword(strPassword);
         clickOk();

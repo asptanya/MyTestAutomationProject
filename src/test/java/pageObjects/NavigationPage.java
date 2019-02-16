@@ -21,7 +21,7 @@ public class NavigationPage {
     By buttonSubmenuShowAccountBalanceBy = By.xpath("/html/body/div[1]/div/div[2]/ul[1]/li[2]/ul/li[3]/a");
     By buttonMenuExpensesBy = By.xpath("/html/body/div[1]/div/div[2]/ul[1]/li[3]/a");
     By buttonSubmenuAddExpenseBy = By.xpath("/html/body/div[1]/div/div[2]/ul[1]/li[3]/ul/li[1]/a");
-    //
+    By buttonSubmenuExpenseListBy = By.xpath ("/html/body/div[1]/div/div[2]/ul[1]/li[3]/ul/li[3]/a");
     //
     //
     By buttonMenuCategoriesBy = By.xpath("/html/body/div[1]/div/div[2]/ul[1]/li[4]/a");
@@ -32,6 +32,7 @@ public class NavigationPage {
     By buttonMenuContractorsBy = By.xpath("/html/body/div[1]/div/div[2]/ul[1]/li[5]/a");
     By buttonSubmenuAddContractorBy = By.xpath("/html/body/div[1]/div/div[2]/ul[1]/li[5]/ul/li/a");
     By modalWindowLoginConfirmationBy = By.xpath ("/html/body/div[2]/div");
+    By modalWindowLoginErrorConfirmationBy = By.xpath ("/html/body/div[2]/form/div[1]");
 
     public void goToAddContractor() {
         driver.findElement(buttonMenuContractorsBy).click();
@@ -53,8 +54,23 @@ public class NavigationPage {
 
     }
 
+    public boolean isUserNotLoggedin(){
+        return driver.findElement(modalWindowLoginErrorConfirmationBy).getText().contains("Podano błędny login lub hasło, spróbuj ponownie");
+
+    }
+
     public void goToAddExpense(){
         driver.findElement(buttonMenuExpensesBy).click();
         driver.findElement(buttonSubmenuAddExpenseBy).click();
+    }
+
+    public void goToExpenseList(){
+        driver.findElement(buttonMenuExpensesBy).click();
+        driver.findElement(buttonSubmenuExpenseListBy).click();
+    }
+
+    public void goToAddAccount(){
+        driver.findElement(buttonMenuAccountsBy).click();
+        driver.findElement(buttonSubmenuCreateAccountBy).click();
     }
 }
